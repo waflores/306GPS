@@ -22,7 +22,38 @@
 #define DELIMITER_LOCATION 1
 #define MIN_SIZE_OF_TOKEN 1
 #define SIZE_OF_NO_TOKEN 0
-
+#define ERR_CNOTFOUND -1
+#define NUM_SENTENCES 4
+#define SENTENCE_LEN 16
+/*------------------------------------------------------------------------------
+Gets the index of a character in a string of size n starting at index i
+mgyenik
+------------------------------------------------------------------------------*/
+int get_index(char c, char* str, int n, int i){
+    for(i; i<n; i++){
+        if(str[i] == c)
+            return i;
+    }
+    return ERR_CNOTFOUND;
+}
+    
+/*------------------------------------------------------------------------------
+Crappy function that copies a nmea sentences from an array into some other arrays.
+CHECK YO BOUNDS NIGGA, ELSE YOU STACK BE HURTIN'
+mgyenik
+------------------------------------------------------------------------------*/
+void get_nmea_sentences(char* in, char** out){
+    int out_index = CLEAR_INDEX;
+    int index = CLEAR_INDEX;
+    int next_index = CLEAR_INDEX;
+    index = get_index('$', u2BUFFER, BUF_LEN, index);
+    while((index < BUF_LEN) && (out_index < NUM_SENTENCES)){
+        next_index = get_index('$', u2BUFFER, BUF_LEN, index);
+        lol_strncpy(globalbuf, out[out_index], index, next_index);
+        out_index++;
+        index = next_index;
+    }
+}
 /*******************************************************************************
 * Purpose: Tokenizes a string with a delimiter.
 * Passed: Input string and character delimter.
@@ -208,4 +239,4 @@ void safefree(char **pp) {
         *pp = NULL;
     }
 }
-*/
+&*/
