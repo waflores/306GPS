@@ -92,6 +92,7 @@ void main(void) {
             else if ((buttonPressed & SW2_PRESSED)) {
                 /* Clear the bit */
                 buttonPressed &= ~(SW2_PRESSED);
+                clearScreen();
             }
             else if ((buttonPressed & SW3_PRESSED)){
                 /* Clear the bit */
@@ -99,8 +100,7 @@ void main(void) {
             }	
         }
         else {
-            //displayUART2Stream();
-            displayScroller();
+            gpsProcess();
         }
     }
 }

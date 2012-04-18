@@ -42,18 +42,23 @@ Crappy function that copies a nmea sentences from an array into some other array
 CHECK YO BOUNDS NIGGA, ELSE YOU STACK BE HURTIN'
 mgyenik
 ------------------------------------------------------------------------------*/
+/*
 void get_nmea_sentences(char* in, char** out){
     int out_index = CLEAR_INDEX;
     int index = CLEAR_INDEX;
     int next_index = CLEAR_INDEX;
     index = get_index('$', u2BUFFER, BUF_LEN, index);
     while((index < BUF_LEN) && (out_index < NUM_SENTENCES)){
+        // globalbuf == u2Buffer
+        // implement strncpy
         next_index = get_index('$', u2BUFFER, BUF_LEN, index);
         lol_strncpy(globalbuf, out[out_index], index, next_index);
         out_index++;
         index = next_index;
     }
 }
+*/
+
 /*******************************************************************************
 * Purpose: Tokenizes a string with a delimiter.
 * Passed: Input string and character delimter.

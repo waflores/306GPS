@@ -500,10 +500,6 @@
 "{WK_TB00000029_SYSTEMTOOL}" "TOOLBAR 0" 59419 2 3 "0.00" 0 0 0 0 0 17 0 "" "0.0" 
 [WINDOW_Z_ORDER]
 "C:\WorkSpace\Project2a\Project2a\gps.c" 
-"C:\WorkSpace\Project2a\Project2a\ncrt0.a30" 
-"C:\WorkSpace\Project2a\Project2a\LCD.c" 
-"C:\WorkSpace\Project2a\Project2a\main.c" 
-"C:\WorkSpace\Project2a\Project2a\Interrupts.c" 
 [TARGET_NAME]
 "M16C E8 SYSTEM" "" 0 
 [STATUSBAR_STATEINFO_VD1]
@@ -550,6 +546,6 @@
 [FLASH_DETAILS]
 "0.000000" 0 0 "" 0 "" 0 0 "" 1 1 0 0 0 0 0 "" "" "" "" "" 
 [BREAKPOINTS]
-"c:\workspace\project2a\project2a\gps.c" 82 1000254 1 "{00000000-0000-0000-C000-000000000046}" "" 
+"c:\workspace\project2a\project2a\gps.c" 81 1000135 1 "{00000000-0000-0000-C000-000000000046}" "" 
 "c:\workspace\project2a\project2a\main.c" 148 0 1 "{00000000-0000-0000-C000-000000000046}" "" 
 [END]
