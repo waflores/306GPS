@@ -27,6 +27,7 @@
 #include "shapes.h"
 #include "movement.h"
 #include "IR.h"
+#include "gps.h"
 
 /*******************************************************************************
  * Purpose: This function allows the user to press a button which sends a string
@@ -100,7 +101,9 @@ void main(void) {
             }	
         }
         else {
+            /* Process in the input and display the coordinates */
             gpsProcess();
+            displayScroller(latGet, lonGet);
         }
     }
 }

@@ -49,4 +49,10 @@ extern volatile unsigned int u2_wr;
 extern volatile unsigned char u2BuffFull;
 extern volatile unsigned char u0BUFFER[U0_BUF_SIZE];
 extern volatile unsigned char u2BUFFER[U2_BUF_SIZE];
+
+// GPS Buffers
+#define GPS_COORD_SIZE 13
+extern volatile unsigned char lonGet[GPS_COORD_SIZE];
+extern volatile unsigned char latGet[GPS_COORD_SIZE];
+
 #endif /* EXTERN_H */

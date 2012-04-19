@@ -56,7 +56,7 @@
 #define LED_OFF PIN_HIGH
 
 /* GPS Signal Names */
-
+#define GPS_RESET p3_5
 #define GPS_PWR p3_6
 #define GPS_PWRCHK p9_7
 #define GPS_PWRCTRL p3_4
