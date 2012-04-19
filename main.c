@@ -1,7 +1,7 @@
 /******************************************************************************* 
  * File:  main.c
  * Author: Will Flores waflores@ncsu.edu
- * Usage: Implements Project 2b.
+ * Usage: Implements Project 3.
  * Description: This file contains the main function which allows the user
  *              to press buttons on the QSK board and have the LCD display
  *              words as per button presses.
@@ -13,11 +13,11 @@
  *              2.0, Project 2a + Homework 5 improvements
  *              2.5, Project 2b
  *              2.9, Homework 8 Functionality
+ *              3.0, Proejct 3 works :)
  * 
  * Created on March 26, 2012
  *******************************************************************************/
 
-//#include <stdio.h>
 #include "QSKDefines.h"
 #include "proto.h"
 #include "extern.h"
@@ -38,9 +38,6 @@
  * Author: Will Flores waflores@ncsu.edu
  *******************************************************************************/
 void main(void) {
-    /* Transmit String */
-    char transmitStr[] = "NCSU #1";
-    
     /* Watchdog timer would go here */
 	
     /* Initialize the ports */
@@ -81,14 +78,13 @@ void main(void) {
     gps_init();
     
     while(FOREVER) {
+        /* Pressing the Buttons do Nothing in this Project */
         if (buttonPressed) {
             if((buttonPressed & SW1_PRESSED)) {
                 /* Clear the bit */
                 buttonPressed &= ~(SW1_PRESSED);
                 /* Clear the screen */
                 clearScreen();
-                /* Send HW 8 string */
-                transmitUART2(transmitStr);
             }
             else if ((buttonPressed & SW2_PRESSED)) {
                 /* Clear the bit */
@@ -98,6 +94,7 @@ void main(void) {
             else if ((buttonPressed & SW3_PRESSED)){
                 /* Clear the bit */
                 buttonPressed &= ~(SW3_PRESSED);
+                clearScreen();
             }	
         }
         else {

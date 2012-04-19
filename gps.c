@@ -19,7 +19,7 @@
 #include "helperfuncs.h"
 #include "gps.h"
 
-#define GPS_BOUND_CHECK (GPS_COORD_SIZE - 1)
+#define GPS_BOUND_CHECK (GPS_COORD_SIZE - 1) // Coord size in QSKDefines.h
 // adhoc defines
 #define HAVENOTHING 0x00
 #define HAVEADOLLARSIGN 0x01
@@ -31,14 +31,19 @@
 #define HAVEGPSHEAD 0x3F
 #define VALIDCOORD 0x40 // assuming we got a gps header
 #define VALIDATEREADY 2 // numbers of commas in message
-#define LAT_READY 3
-#define LON_READY 5
-#define COORD_OVER 7
+#define LAT_READY 3 // Next symbols = latitude token
+#define LON_READY 5 // Next symbols = longitude token
+#define COORD_OVER 7 // Next symbols are garbage
 // Display defines
 #define ADC_MSbyte_SHIFT 0x08
-#define GPS_DISPLAY_LIMIT 4 // Number of chars to display on LCD
+#define GPS_DISPLAY_LIMIT 5 // Number of chars to display on LCD
 #define LCD_DISPLAY_LIMIT 10 
+#define DISPLAY_1_CHAR 1
+#define DISPLAY_2_CHAR 2
+#define DISPLAY_3_CHAR 3
+#define DISPLAY_4_CHAR 4
 
+#define SECOND_ELEMENT 1
 /* Global Latitude and Longitude Buffers */
 volatile unsigned char lonGet[GPS_COORD_SIZE];
 volatile unsigned char latGet[GPS_COORD_SIZE];
@@ -152,24 +157,42 @@ void gpsProcess (void) {
                         //LED0 = LED1 = LED2 = LED_OFF;
                     }
                     else {
-                        /* Clear the longitude and latitude buffers */
-                        for (latIndex = CLEAR_INDEX; latIndex < GPS_COORD_SIZE; ++latIndex){
-                            lonGet[latIndex] = latGet[latIndex] = CLEAR_INDEX;
+                        /* Prepare Coordinate Buffers for coordinates */
+                       for (latIndex = CLEAR_INDEX; latIndex < GPS_COORD_SIZE; ++latIndex){
+                            /* Fill the first indices with spaces */
+                            if (latIndex == CLEAR_INDEX) lonGet[latIndex] = latGet[latIndex] = ' ';
+                            else lonGet[latIndex] = latGet[latIndex] = CLEAR_INDEX;
                         }
-                        latIndex = CLEAR_INDEX; // Clear the used Index
+                        lonIndex = latIndex = SECOND_ELEMENT; // Start it up
                     }
                 }
                 /* Determine what's in the Latitude Token */
                 else if ((commaCount >= LAT_READY) && (commaCount < LON_READY)) {
                     /* Bound Checking for lulz */
-                    if (latIndex < GPS_BOUND_CHECK) latGet[latIndex++] = gpsVal;
-                    else latGet[latIndex] = CLEAR_CHAR; 
+                    if (latIndex < GPS_BOUND_CHECK) {
+                        /* deal with leading zeroes & cardinal directions */
+                        if ((latIndex == SECOND_ELEMENT) && (gpsVal == '0'));
+                        else if ((gpsVal == 'N') || (gpsVal == 'S')){
+                            latGet[latIndex++] = ' ';
+                            latGet[latIndex++] = gpsVal;
+                        }
+                        else latGet[latIndex++] = gpsVal; // other valid input
+                    }
+                    else latGet[latIndex] = CLEAR_CHAR; // NULL terminated Str
                 }
                 /* Determine what's in the Longitude Token */
                 else if ((commaCount >= LON_READY) && (commaCount < COORD_OVER)) {
                     /* Bound Checking for lulz */
-                    if (lonIndex < GPS_BOUND_CHECK) lonGet[lonIndex++] = gpsVal;
-                    else lonGet[lonIndex] = CLEAR_CHAR;
+                    if (lonIndex < GPS_BOUND_CHECK) {
+                        /* deal with leading zeroes & cardinal directions */
+                        if ((lonIndex == SECOND_ELEMENT) && (gpsVal == '0'));
+                        else if ((gpsVal == 'W') || (gpsVal == 'E')){
+                            lonGet[lonIndex++] = ' ';
+                            lonGet[lonIndex++] = gpsVal;
+                        }
+                        else lonGet[lonIndex++] = gpsVal; // other valid input
+                    }
+                    else lonGet[lonIndex] = CLEAR_CHAR; // NULL terminated Str
                 }
                 /* Clean up, we're done parsing the stream */
                 else if (commaCount == COORD_OVER) {
@@ -216,46 +239,98 @@ void gpsProcess (void) {
     }
 }
 
+/*******************************************************************************
+* Purpose: Displays the GPS information for user to view
+* Passed: char * TopStr - Top string to be viewed.
+*         char * BottomStr - Bottom string to be viewed.
+* Locals: int displayIndex - where in the buffer are they going to see.
+*         int topStrSize - Top display string size
+*         int bottomStrSize - Bottom display string size
+*         int thumbval - Thumbwheel ADC value;
+*         int topShowem - The bounds of what we're going to show at top.
+*         int botShowem - The bounds of what we're going to show at bottom.
+* 
+* Returned: No values returned.
+* Author: Will Flores waflores@ncsu.edu
+*******************************************************************************/
 void displayScroller(char * TopStr, char * BottomStr) {
-    int count = CLEAR_INDEX; 
     int displayIndex = CLEAR_INDEX; 
     int topStrSize = CLEAR_INDEX;
     int bottomStrSize = CLEAR_INDEX;
     int thumbval = CLEAR_INDEX;
-    char LCDdisplayTop[LCD_DISPLAY_LIMIT];
-    char LCDdisplayBottom[LCD_DISPLAY_LIMIT];
-    
+    int topShowem = CLEAR_INDEX;
+    int botShowem = CLEAR_INDEX;
+    /* Determine input String Size */
     topStrSize = strlength(TopStr);
     bottomStrSize = strlength(BottomStr);
     
+    /* Get thumb wheel value */
     thumbval = (T_WHEEL & T_WHEELMASK) >> ADC_MSbyte_SHIFT;
+    /* We're tweaking the range without tweaking the above bit shift */
+    if (thumbval == DISPLAY_3_CHAR) thumbval = DISPLAY_2_CHAR;
+    /* The thumbwheel should be able to handle showing all of the below stuff */
     displayIndex = thumbval*GPS_DISPLAY_LIMIT;
+	
+    /* Measure how much they want to show us */
+    topShowem = topStrSize - displayIndex;
+    botShowem = bottomStrSize - displayIndex;
     
-    /* Clear the Display Buffers */
-    for(count = CLEAR_INDEX; count < LCD_DISPLAY_LIMIT; ++count) {
-       LCDdisplayBottom[count] = LCDdisplayTop[count] = CLEAR_INDEX;
-     }
-    /* Initialize the Strings */
-    initDisplayStrings(LCDdisplayTop, LCDdisplayBottom);
-    
-    /* Determine what you want to display */
-    if (displayIndex <= topStrSize){ /* Check to see if index is displayable */
-        for (count = strlength(LCDdisplayTop); count < LCD_DISPLAY_LIMIT; ++count){
-            LCDdisplayTop[count] = TopStr[displayIndex++];
-            if (displayIndex > topStrSize) break;
-        }
-    }
-    if (displayIndex <= bottomStrSize){ /* Check to see if index is displayable */
-        for (count = strlength(LCDdisplayBottom); count < LCD_DISPLAY_LIMIT; ++count){
-            LCDdisplayBottom[count] = BottomStr[displayIndex++];
-            if (displayIndex > bottomStrSize) break;
-        }
-    }
-    /* Display your creations */
     clearScreen();
-    DisplayString(LCD_LINE1, LCDdisplayTop);
-    DisplayString(LCD_LINE2, LCDdisplayBottom);
-    DisplayDelay(2*DISPLAY_DELAY);
+    /* Determine what you want to display */
+    if (topShowem >= GPS_DISPLAY_LIMIT) { /* Check to see if we can display everything */
+        BNSPrintf(LCD, "\tLAT%c%c%c%c%c", TopStr[displayIndex], TopStr[displayIndex+DISPLAY_1_CHAR],
+                TopStr[displayIndex+DISPLAY_2_CHAR], TopStr[displayIndex+DISPLAY_3_CHAR], TopStr[displayIndex+DISPLAY_4_CHAR]);
+    }
+    else {
+        switch (topShowem) { /* The special cases for our display */
+            case DISPLAY_4_CHAR:
+                BNSPrintf(LCD, "\tLAT%c%c%c%c", TopStr[displayIndex], TopStr[displayIndex+DISPLAY_1_CHAR],
+                TopStr[displayIndex+DISPLAY_2_CHAR], TopStr[displayIndex+DISPLAY_3_CHAR]);
+                break;
+            case DISPLAY_3_CHAR:
+                BNSPrintf(LCD, "\tLAT%c%c%c", TopStr[displayIndex], TopStr[displayIndex+DISPLAY_1_CHAR],
+                TopStr[displayIndex+DISPLAY_2_CHAR]);
+                break;
+            case DISPLAY_2_CHAR:
+                BNSPrintf(LCD, "\tLAT%c%c", TopStr[displayIndex], TopStr[displayIndex+DISPLAY_1_CHAR]);
+                break;
+            case DISPLAY_1_CHAR:
+                BNSPrintf(LCD, "\tLAT%c", TopStr[displayIndex]);
+                break;
+            default:
+                BNSPrintf(LCD, "\tLAT ");
+                break;
+        }
+    }
+    /* Determine what part of the bottom do they want to show */
+    if (botShowem >= GPS_DISPLAY_LIMIT) {
+        BNSPrintf(LCD, "\t\nLON%c%c%c%c%c", BottomStr[displayIndex], BottomStr[displayIndex+DISPLAY_1_CHAR],
+                BottomStr[displayIndex+DISPLAY_2_CHAR], BottomStr[displayIndex+DISPLAY_3_CHAR], BottomStr[displayIndex+DISPLAY_4_CHAR]);
+    }
+    else {
+        switch (botShowem) {
+            case DISPLAY_4_CHAR:
+                BNSPrintf(LCD, "\t\nLON%c%c%c%c", BottomStr[displayIndex], BottomStr[displayIndex+DISPLAY_1_CHAR],
+                BottomStr[displayIndex+DISPLAY_2_CHAR], BottomStr[displayIndex+DISPLAY_3_CHAR]);
+                break;
+            case DISPLAY_3_CHAR:
+                BNSPrintf(LCD, "\t\nLON%c%c%c", BottomStr[displayIndex], BottomStr[displayIndex+DISPLAY_1_CHAR],
+                BottomStr[displayIndex+DISPLAY_2_CHAR]);
+                break;
+            case DISPLAY_2_CHAR:
+                BNSPrintf(LCD, "\t\nLON%c%c", BottomStr[displayIndex], BottomStr[displayIndex+DISPLAY_1_CHAR]);
+                break;
+            case DISPLAY_1_CHAR:
+                BNSPrintf(LCD, "\t\nLON%c", BottomStr[displayIndex]);
+                break;
+            default:
+                BNSPrintf(LCD, "\t\nLON ");
+                break;
+        }
+    }
+	// Stabilize for 250 ms
+	timerDelay(TWO_FIFTY_MS);
+    while(timerA1_started);
 }
     
 /*******************************************************************************
@@ -269,21 +344,4 @@ void displayScroller(char * TopStr, char * BottomStr) {
 void gpsCleanUp(int * numberToClear1, int * numberToClear2) {
     *numberToClear1 = CLEAR_INDEX;
     *numberToClear2 = CLEAR_INDEX;
-}
-
-void initDisplayStrings(char * topStr, char * botStr) {
-    int index = CLEAR_INDEX; // index for loop
-    char topInitStr[] = "LAT ";
-    char bottomInitStr[] = "LON ";
-    
-    // Initialize the strings to the predefined string
-    while (topInitStr[index]) {
-        topStr[index] = topInitStr[index];
-        ++index;
-    }
-    index = CLEAR_INDEX; // reset the index 
-    while (bottomInitStr[index]) {
-        botStr[index] = bottomInitStr[index];
-        ++index;
-    }
 }

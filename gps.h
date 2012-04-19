@@ -18,5 +18,5 @@ void gps_init(void);
 void gpsProcess (void);
 void gpsCleanUp(int * numberToClear1, int * numberToClear2);
 void displayScroller(char * TopStr, char * BottomStr); 
-void initDisplayStrings(char * topStr, char * botStr);
+
 #endif

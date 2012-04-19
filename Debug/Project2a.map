@@ -11,58 +11,58 @@ c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\bin\ln30.exe @C:
 
 # LINK FILE INFORMATION
 ncrt0 (C:\WorkSpace\Project2a\Project2a\Debug\ncrt0.r30)
-	Apr 18 23:35:31 2012
+	Apr 19 10:25:08 2012
 
 adc (C:\WorkSpace\Project2a\Project2a\Debug\adc.r30)
-	Apr 18 23:35:22 2012
+	Apr 19 10:24:49 2012
 
 clocks (C:\WorkSpace\Project2a\Project2a\Debug\clocks.r30)
-	Apr 18 23:35:23 2012
+	Apr 19 10:24:51 2012
 
 gps (C:\WorkSpace\Project2a\Project2a\Debug\gps.r30)
-	Apr 18 23:54:23 2012
+	Apr 19 10:24:54 2012
 
 helperfuncs (C:\WorkSpace\Project2a\Project2a\Debug\helperfuncs.r30)
-	Apr 18 23:35:24 2012
+	Apr 19 10:24:55 2012
 
 Interrupts (C:\WorkSpace\Project2a\Project2a\Debug\Interrupts.r30)
-	Apr 18 23:50:26 2012
+	Apr 19 10:24:45 2012
 
 IR (C:\WorkSpace\Project2a\Project2a\Debug\IR.r30)
-	Apr 18 23:50:25 2012
+	Apr 19 10:24:42 2012
 
 IRmovement (C:\WorkSpace\Project2a\Project2a\Debug\IRmovement.r30)
-	Apr 18 23:50:25 2012
+	Apr 19 10:24:44 2012
 
 LCD (C:\WorkSpace\Project2a\Project2a\Debug\LCD.r30)
-	Apr 18 23:50:27 2012
+	Apr 19 10:24:48 2012
 
 led (C:\WorkSpace\Project2a\Project2a\Debug\led.r30)
-	Apr 18 23:50:28 2012
+	Apr 19 10:24:56 2012
 
 main (C:\WorkSpace\Project2a\Project2a\Debug\main.r30)
-	Apr 18 23:50:29 2012
+	Apr 19 10:24:57 2012
 
 movement (C:\WorkSpace\Project2a\Project2a\Debug\movement.r30)
-	Apr 18 23:35:26 2012
+	Apr 19 10:24:59 2012
 
 movementLeftCheck (C:\WorkSpace\Project2a\Project2a\Debug\movementLeftCheck.r30)
-	Apr 18 23:35:27 2012
+	Apr 19 10:25:00 2012
 
 movementRightCheck (C:\WorkSpace\Project2a\Project2a\Debug\movementRightCheck.r30)
-	Apr 18 23:35:28 2012
+	Apr 19 10:25:01 2012
 
 ports (C:\WorkSpace\Project2a\Project2a\Debug\ports.r30)
-	Apr 18 23:50:29 2012
+	Apr 19 10:25:03 2012
 
 serial (C:\WorkSpace\Project2a\Project2a\Debug\serial.r30)
-	Apr 18 23:50:30 2012
+	Apr 19 10:25:04 2012
 
 shapes (C:\WorkSpace\Project2a\Project2a\Debug\shapes.r30)
-	Apr 18 23:50:31 2012
+	Apr 19 10:25:06 2012
 
 timers (C:\WorkSpace\Project2a\Project2a\Debug\timers.r30)
-	Apr 18 23:50:31 2012
+	Apr 19 10:25:07 2012
 
 _f8add (c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib)
 	Nov  8 18:36:40 2007
@@ -97,35 +97,8 @@ _i4utof8 (c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\
 _ltof (c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib)
 	Nov  8 18:36:44 2007
 
-cdata (c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib)
-	Nov  8 18:36:47 2007
-
-malloc (c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib)
-	Nov  8 18:36:57 2007
-
-realloc (c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib)
-	Nov  8 18:36:57 2007
-
-free (c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib)
-	Nov  8 18:36:57 2007
-
 mdata (c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib)
 	Nov  8 18:36:57 2007
-
-memcpy (c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib)
-	Nov  8 18:36:58 2007
-
-memmove (c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib)
-	Nov  8 18:36:59 2007
-
-memset (c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib)
-	Nov  8 18:36:59 2007
-
-strlen (c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib)
-	Nov  8 18:37:13 2007
-
-strncpy (c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib)
-	Nov  8 18:37:13 2007
 
 _f8ltor (c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib)
 	Nov  8 18:36:41 2007
@@ -165,123 +138,108 @@ rom_NE                           ABS ROMDATA 00F000 000000       ncrt0
 rom_NO                           REL ROMDATA 00F000 000000       ncrt0
 rom_FE                           ABS ROMDATA 0F4000 000000       ncrt0
 rom_FO                           REL ROMDATA 0F4000 000000       ncrt0
-                                 REL ROMDATA 0F4000 00001C       gps
-                                 REL ROMDATA 0F401C 000002       helperfuncs
-                                 REL ROMDATA 0F401E 00003A       IR
-                                 REL ROMDATA 0F4058 00002F       LCD
-                                 REL ROMDATA 0F4087 000043       main
-                                 REL ROMDATA 0F40CA 000016       serial
-                                 REL ROMDATA 0F40E0 000101       cdata
-data_SEI                         REL ROMDATA 0F41E2 000000 2     ncrt0
-data_SOI                         REL ROMDATA 0F41E2 000000       ncrt0
-data_NEI                         REL ROMDATA 0F41E2 000000 2     ncrt0
-                                 REL ROMDATA 0F41E2 000006       gps
-                                 REL ROMDATA 0F41E8 000010       mdata
-data_NOI                         REL ROMDATA 0F41F8 000000       ncrt0
-                                 REL ROMDATA 0F41F8 000001       gps
-                                 REL ROMDATA 0F41F9 000001       LCD
-program                          REL CODE    0F41FA 000000 2     ncrt0
-                                 REL CODE    0F41FA 00002E 2     adc
-                                 REL CODE    0F4228 000445 2     gps
-                                 REL CODE    0F466E 0002BD 2     helperfuncs
-                                 REL CODE    0F492C 000159 2     Interrupts
-                                 REL CODE    0F4A86 0000E7 2     IR
-                                 REL CODE    0F4B6E 0000D5 2     IRmovement
-                                 REL CODE    0F4C44 000864 2     LCD
-                                 REL CODE    0F54A8 000001 2     led
-                                 REL CODE    0F54AA 000135 2     main
-                                 REL CODE    0F55E0 000083 2     movement
-                                 REL CODE    0F5664 000032 2     movementLeftCheck
-                                 REL CODE    0F5696 000032 2     movementRightCheck
-                                 REL CODE    0F56C8 00022A 2     ports
-                                 REL CODE    0F58F2 0001C7 2     serial
-                                 REL CODE    0F5ABA 000205 2     shapes
-                                 REL CODE    0F5CC0 00012B 2     timers
-                                 REL CODE    0F5DEC 00091B 2     _f8add
-                                 REL CODE    0F6708 0000A7 2     _f8ge
-                                 REL CODE    0F67B0 0002C7 2     _f8mul
-                                 REL CODE    0F6A78 000028 2     _f8sub
-                                 REL CODE    0F6AA0 000025 2     _f8toi4u
-                                 REL CODE    0F6AC6 000111 2     _ftol
-                                 REL CODE    0F6BD8 00004D 2     _i4divu
-                                 REL CODE    0F6C26 00004B 2     _i4modu
-                                 REL CODE    0F6C72 00001C 2     _i4mulu
-                                 REL CODE    0F6C8E 000022 2     _i4utof8
-                                 REL CODE    0F6CB0 0000D4 2     _ltof
-                                 REL CODE    0F6D84 0001D9 2     malloc
-                                 REL CODE    0F6F5E 000085 2     realloc
-                                 REL CODE    0F6FE4 0002CF 2     free
-                                 REL CODE    0F72B4 00004F 2     memcpy
-                                 REL CODE    0F7304 0000A9 2     memmove
-                                 REL CODE    0F73AE 000041 2     memset
-                                 REL CODE    0F73F0 00002B 2     strlen
-                                 REL CODE    0F741C 000049 2     strncpy
-                                 REL CODE    0F7466 000054 2     _f8ltor
-                                 REL CODE    0F74BA 000041 2     _f8rtol
-interrupt                        REL CODE    0F74FC 000000 2     ncrt0
-                                 REL CODE    0F74FC 0000A7       ncrt0
-program_S                        REL CODE    0F75A4 000000 2     ncrt0
+                                 REL ROMDATA 0F4000 00009C       gps
+                                 REL ROMDATA 0F409C 00003A       IR
+                                 REL ROMDATA 0F40D6 00002F       LCD
+                                 REL ROMDATA 0F4105 000043       main
+                                 REL ROMDATA 0F4148 000016       serial
+data_SEI                         REL ROMDATA 0F415E 000000 2     ncrt0
+data_SOI                         REL ROMDATA 0F415E 000000       ncrt0
+data_NEI                         REL ROMDATA 0F415E 000000 2     ncrt0
+                                 REL ROMDATA 0F415E 000006       gps
+                                 REL ROMDATA 0F4164 000010       mdata
+data_NOI                         REL ROMDATA 0F4174 000000       ncrt0
+                                 REL ROMDATA 0F4174 000001       gps
+                                 REL ROMDATA 0F4175 000001       LCD
+program                          REL CODE    0F4176 000000 2     ncrt0
+                                 REL CODE    0F4176 00002E 2     adc
+                                 REL CODE    0F41A4 000677 2     gps
+                                 REL CODE    0F481C 00001D 2     helperfuncs
+                                 REL CODE    0F483A 000159 2     Interrupts
+                                 REL CODE    0F4994 0000E7 2     IR
+                                 REL CODE    0F4A7C 0000D5 2     IRmovement
+                                 REL CODE    0F4B52 000864 2     LCD
+                                 REL CODE    0F53B6 000001 2     led
+                                 REL CODE    0F53B8 000117 2     main
+                                 REL CODE    0F54D0 000083 2     movement
+                                 REL CODE    0F5554 000032 2     movementLeftCheck
+                                 REL CODE    0F5586 000032 2     movementRightCheck
+                                 REL CODE    0F55B8 00022A 2     ports
+                                 REL CODE    0F57E2 0001C7 2     serial
+                                 REL CODE    0F59AA 000205 2     shapes
+                                 REL CODE    0F5BB0 00012B 2     timers
+                                 REL CODE    0F5CDC 00091B 2     _f8add
+                                 REL CODE    0F65F8 0000A7 2     _f8ge
+                                 REL CODE    0F66A0 0002C7 2     _f8mul
+                                 REL CODE    0F6968 000028 2     _f8sub
+                                 REL CODE    0F6990 000025 2     _f8toi4u
+                                 REL CODE    0F69B6 000111 2     _ftol
+                                 REL CODE    0F6AC8 00004D 2     _i4divu
+                                 REL CODE    0F6B16 00004B 2     _i4modu
+                                 REL CODE    0F6B62 00001C 2     _i4mulu
+                                 REL CODE    0F6B7E 000022 2     _i4utof8
+                                 REL CODE    0F6BA0 0000D4 2     _ltof
+                                 REL CODE    0F6C74 000054 2     _f8ltor
+                                 REL CODE    0F6CC8 000041 2     _f8rtol
+interrupt                        REL CODE    0F6D0A 000000 2     ncrt0
+                                 REL CODE    0F6D0A 0000A7       ncrt0
+program_S                        REL CODE    0F6DB2 000000 2     ncrt0
 vector                           ABS ROMDATA 0FFD00 000100       ncrt0
 fvector                          ABS ROMDATA 0FFFDC 000024       ncrt0
 # Total -------------------------------------------------------------------
                                      DATA           0009A6(0002470) Byte(s)
-                                     ROMDATA        00031D(0000797) Byte(s)
-                                     CODE           0033A8(0013224) Byte(s)
+                                     ROMDATA        00029A(0000666) Byte(s)
+                                     CODE           002C3A(0011322) Byte(s)
 
 ##########################################
 # (3) GLOBAL LABEL INFORMATION           #
 ##########################################
-$BNSPutch          0f52b2  $DisplayString     0f530a  $LCD_write         0f5368
-$_f8ltor           0f7466  $_f8rtol           0f74ba  $_ftol             0f6ac6
-$_ltof             0f6cb0  $displayScroller   0f44e6  $exit              0f75a0
-$fillStr           0f47c0  $get_index         0f466e  $getmem            0f6de8
-$gpsCleanUp        0f45f0  $initDisplayStri   0f4606  $leftCircle        0f5b12
-$memset            0f73ae  $rightCircle       0f5aba  $rlsmem            0f701c
-$setIR_threshold   0f4b60  $set_lWheelCount   0f5dde  $set_rWheelCount   0f5dd0
-$strlength         0f490e  $timerDelay        0f5d32  $transmitUART2     0f59b6
-$triangle          0f5b64  _A1_ticks          0004f6  _A2DInterrupt      0f4a62
+$BNSPutch          0f51c0  $DisplayString     0f5218  $LCD_write         0f5276
+$_f8ltor           0f6c74  $_f8rtol           0f6cc8  $_ftol             0f69b6
+$_ltof             0f6ba0  $displayScroller   0f44ec  $exit              0f6dae
+$gpsCleanUp        0f4806  $leftCircle        0f5a02  $rightCircle       0f59aa
+$setIR_threshold   0f4a6e  $set_lWheelCount   0f5cce  $set_rWheelCount   0f5cc0
+$strlength         0f481c  $timerDelay        0f5c22  $transmitUART2     0f58a6
+$triangle          0f5a54  _A1_ticks          0004f6  _A2DInterrupt      0f4970
 _A2DProcessed      000524  _A2DValue          00049a  _A2DValuePot       00049c
-_A2DValueTherm     00049e  _ADInit            0f41fa  _BNSPrintf         0f4d02
-_DMA0Interrupt     0f4a80  _DisplayDelay      0f5416  _IR_emitter_off    0f4a8c
-_IR_emitter_on     0f4a86  _IR_threshold      000496  _InitDisplay       0f4c44
-_InitUART          0f58f2  _KeyBoardInterru   0f4a68  _LEDDisplay        0f54a8
-_LeftBtnInterrup   0f49ea  _MiddleBtnInterr   0f49f6  _RTCInterrupt      0f4a6e
-_RightBtnInterru   0f4a02  _Split             0f4698  _TimerA0Interrup   0f4984
-_TimerA0_Init      0f5cce  _TimerA1Interrup   0f499c  _TimerA1_Init      0f5d0e
-_TimerA2Interrup   0f49b4  _TimerA2_Init      0f5d48  _TimerB0Interrup   0f49d2
-_TimerB0_Init      0f5d80  _TimerInit         0f5cc0  _UART0ReceiveInt   0f4a0e
-_UART0TransmitIn   0f4a7a  _UART2ReceiveInt   0f4a36  _WatchDogInterru   0f4a74
-__ctype            0f40e0  __f8add            0f5dec  __f8ge             0f6708
-__f8mul            0f67b0  __f8sub            0f6a78  __f8toi4U          0f6aa0
-__i4Utof8          0f6c8e  __i4divU           0f6bd8  __i4modU           0f6c26
-__i4mulU           0f6c72  __memt             00048e  __mnext            000500
-__msize            000504  __pool             000486  _buttonPressed     0004a0
-_calibrateIR       0f4a92  _clearScreen       0f5488  _disp_count        000498
-_displayUART2Str   0f5a3c  _emptyStr          0f48b2  _enable_LeftBtn_   0f4936
-_enable_MiddleBt   0f4944  _enable_RightBtn   0f4976  _exit              0f75a0
-_figure8           0f5c92  _free              0f6fe4  _gpsProcess        0f42dc
-_gps_init          0f4228  _init_interrupts   0f492c  _init_port0        0f56e2
-_init_port1        0f5708  _init_port10       0f58ce  _init_port2        0f572e
-_init_port3        0f5754  _init_port4        0f577a  _init_port5        0f57a0
-_init_port6        0f57c6  _init_port7        0f5808  _init_port8        0f584a
-_init_port9        0f588c  _init_ports        0f56c8  _is_left_forward   0f5664
-_is_left_motor_o   0f5678  _is_left_reverse   0f566e  _is_right_forwar   0f5696
-_is_right_motor_   0f56aa  _is_right_revers   0f56a0  _l_count           0004f2
-_latGet            000517  _left_motor_forw   0f55e0  _left_motor_off    0f5646
-_left_motor_reve   0f55f4  _lonGet            00050a  _main              0f54aa
-_malloc            0f6d84  _memcpy            0f72b4  _memmove           0f7304
-_motors_off        0f5630  _moveBackandFort   0f4b6e  _move_forward      0f5654
-_move_reverse      0f565c  _r_count           0004f4  _realloc           0f6f5e
-_right_motor_for   0f5608  _right_motor_off   0f5638  _right_motor_rev   0f561c
-_start_MiddleBtn   0f496a  _start_leftWheel   0f5cfa  _start_rightWhee   0f5dac
-_start_timerA2     0f5d6c  _start_wheelTime   0f5dc0  _stop_MiddleBtn_   0f4970
-_stop_timerA0      0f5d04  _stop_timerA2      0f5d76  _stop_timerB0      0f5db6
-_stop_wheelTimer   0f5dc8  _strlen            0f73f0  _strncpy           0f741c
-_system_clock_in   0f5444  _timerA0_started   0004f8  _timerA1_started   0004fa
-_timerA2_started   0004fe  _timerB0_started   0004fc  _u0BUFFER          0004aa
-_u0_rd             0004a2  _u0_wr             0004a4  _u2BUFFER          0004b2
-_u2BuffFull        000525  _u2_rd             0004a6  _u2_wr             0004a8
-dummy_int          0f75a2  start              0f74fc  
+_A2DValueTherm     00049e  _ADInit            0f4176  _BNSPrintf         0f4c10
+_DMA0Interrupt     0f498e  _DisplayDelay      0f5324  _IR_emitter_off    0f499a
+_IR_emitter_on     0f4994  _IR_threshold      000496  _InitDisplay       0f4b52
+_InitUART          0f57e2  _KeyBoardInterru   0f4976  _LEDDisplay        0f53b6
+_LeftBtnInterrup   0f48f8  _MiddleBtnInterr   0f4904  _RTCInterrupt      0f497c
+_RightBtnInterru   0f4910  _TimerA0Interrup   0f4892  _TimerA0_Init      0f5bbe
+_TimerA1Interrup   0f48aa  _TimerA1_Init      0f5bfe  _TimerA2Interrup   0f48c2
+_TimerA2_Init      0f5c38  _TimerB0Interrup   0f48e0  _TimerB0_Init      0f5c70
+_TimerInit         0f5bb0  _UART0ReceiveInt   0f491c  _UART0TransmitIn   0f4988
+_UART2ReceiveInt   0f4944  _WatchDogInterru   0f4982  __f8add            0f5cdc
+__f8ge             0f65f8  __f8mul            0f66a0  __f8sub            0f6968
+__f8toi4U          0f6990  __i4Utof8          0f6b7e  __i4divU           0f6ac8
+__i4modU           0f6b16  __i4mulU           0f6b62  __memt             00048e
+__mnext            000500  __msize            000504  __pool             000486
+_buttonPressed     0004a0  _calibrateIR       0f49a0  _clearScreen       0f5396
+_disp_count        000498  _displayUART2Str   0f592c  _enable_LeftBtn_   0f4844
+_enable_MiddleBt   0f4852  _enable_RightBtn   0f4884  _exit              0f6dae
+_figure8           0f5b82  _gpsProcess        0f4258  _gps_init          0f41a4
+_init_interrupts   0f483a  _init_port0        0f55d2  _init_port1        0f55f8
+_init_port10       0f57be  _init_port2        0f561e  _init_port3        0f5644
+_init_port4        0f566a  _init_port5        0f5690  _init_port6        0f56b6
+_init_port7        0f56f8  _init_port8        0f573a  _init_port9        0f577c
+_init_ports        0f55b8  _is_left_forward   0f5554  _is_left_motor_o   0f5568
+_is_left_reverse   0f555e  _is_right_forwar   0f5586  _is_right_motor_   0f559a
+_is_right_revers   0f5590  _l_count           0004f2  _latGet            000517
+_left_motor_forw   0f54d0  _left_motor_off    0f5536  _left_motor_reve   0f54e4
+_lonGet            00050a  _main              0f53b8  _motors_off        0f5520
+_moveBackandFort   0f4a7c  _move_forward      0f5544  _move_reverse      0f554c
+_r_count           0004f4  _right_motor_for   0f54f8  _right_motor_off   0f5528
+_right_motor_rev   0f550c  _start_MiddleBtn   0f4878  _start_leftWheel   0f5bea
+_start_rightWhee   0f5c9c  _start_timerA2     0f5c5c  _start_wheelTime   0f5cb0
+_stop_MiddleBtn_   0f487e  _stop_timerA0      0f5bf4  _stop_timerA2      0f5c66
+_stop_timerB0      0f5ca6  _stop_wheelTimer   0f5cb8  _system_clock_in   0f5352
+_timerA0_started   0004f8  _timerA1_started   0004fa  _timerA2_started   0004fe
+_timerB0_started   0004fc  _u0BUFFER          0004aa  _u0_rd             0004a2
+_u0_wr             0004a4  _u2BUFFER          0004b2  _u2BuffFull        000525
+_u2_rd             0004a6  _u2_wr             0004a8  dummy_int          0f6db0
+start              0f6d0a  
 
 ##########################################
 # (4) GLOBAL EQU SYMBOL INFORMATION      #
@@ -324,16 +282,7 @@ __SB__           00000480
 @ _i4mulu ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 @ _i4utof8 ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 @ _ltof ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ cdata ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ malloc ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ realloc ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ free ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 @ mdata ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ memcpy ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ memmove ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ memset ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ strlen ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ strncpy ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 @ _f8ltor ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 @ _f8rtol ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 
@@ -369,16 +318,7 @@ __SB__           00000480
 @ _i4mulu ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 @ _i4utof8 ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 @ _ltof ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ cdata ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ malloc ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ realloc ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ free ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 @ mdata ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ memcpy ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ memmove ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ memset ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ strlen ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ strncpy ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 @ _f8ltor ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 @ _f8rtol ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 
@@ -414,16 +354,7 @@ __SB__           00000480
 @ _i4mulu ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 @ _i4utof8 ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 @ _ltof ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ cdata ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ malloc ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ realloc ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ free ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 @ mdata ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ memcpy ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ memmove ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ memset ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ strlen ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
-@ strncpy ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 @ _f8ltor ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 @ _f8rtol ( c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v544r00\lib30\nc30lib.lib )
 
@@ -458,21 +389,21 @@ rom_NO
 rom_FE
                                   000f4000  000f4000         0   1
 rom_FO
-                                  000f4000  000f41e0       1e1   1
+                                  000f4000  000f415d       15e   1
 data_SEI
-                                  000f41e2  000f41e2         0   2
+                                  000f415e  000f415e         0   2
 data_SOI
-                                  000f41e2  000f41e2         0   1
+                                  000f415e  000f415e         0   1
 data_NEI
-                                  000f41e2  000f41f7        16   2
+                                  000f415e  000f4173        16   2
 data_NOI
-                                  000f41f8  000f41f9         2   1
+                                  000f4174  000f4175         2   1
 program
-                                  000f41fa  000f74fa      3301   2
+                                  000f4176  000f6d08      2b93   2
 interrupt
-                                  000f74fc  000f75a2        a7   2
+                                  000f6d0a  000f6db0        a7   2
 program_S
-                                  000f75a4  000f75a4         0   2
+                                  000f6db2  000f6db2         0   2
 vector
                                   000ffd00  000ffdff       100   1
 fvector
@@ -577,351 +508,297 @@ FILE=C:/WorkSpace/Project2a/Project2a/serial
   _u2BuffFull
                                   00000525         1   data ,g         0
 
-SECTION=rom_FO
-FILE=cdata
-                                  000f40e0  000f41e0       101
-  __ctype
-                                  000f40e0         0   none ,g         0
-
 SECTION=program
 FILE=C:/WorkSpace/Project2a/Project2a/adc
-                                  000f41fa  000f4227        2e
+                                  000f4176  000f41a3        2e
   _ADInit
-                                  000f41fa        2e   func ,g         0
+                                  000f4176        2e   func ,g         0
 
 FILE=C:/WorkSpace/Project2a/Project2a/gps
-                                  000f4228  000f466c       445
+                                  000f41a4  000f481a       677
   _gps_init
-                                  000f4228        b4   func ,g         0
+                                  000f41a4        b4   func ,g         0
   _gpsProcess
-                                  000f42dc       20a   func ,g         0
+                                  000f4258       294   func ,g         0
   $displayScroller
-                                  000f44e6       10a   func ,g         0
+                                  000f44ec       31a   func ,g         0
   $gpsCleanUp
-                                  000f45f0        15   func ,g         0
+                                  000f4806        15   func ,g         0
 
 FILE=C:/WorkSpace/Project2a/Project2a/helperfuncs
-                                  000f466e  000f492a       2bd
-  $get_index
-                                  000f466e        29   func ,g         0
-  _Split
-                                  000f4698       129   func ,g         0
-  $fillStr
-                                  000f47c0        f1   func ,g         0
-  _emptyStr
-                                  000f48b2        5c   func ,g         0
+                                  000f481c  000f4838        1d
+  $strlength
+                                  000f481c        1d   func ,g         0
 
 FILE=C:/WorkSpace/Project2a/Project2a/Interrupts
-                                  000f492c  000f4a84       159
+                                  000f483a  000f4992       159
   _init_interrupts
-                                  000f492c         a   func ,g         0
+                                  000f483a         a   func ,g         0
   _enable_LeftBtn_isr
-                                  000f4936         d   func ,g         0
+                                  000f4844         d   func ,g         0
   _enable_MiddleBtn_isr
-                                  000f4944        26   func ,g         0
+                                  000f4852        26   func ,g         0
   _start_MiddleBtn_isr
-                                  000f496a         6   func ,g         0
+                                  000f4878         6   func ,g         0
   _stop_MiddleBtn_isr
-                                  000f4970         6   func ,g         0
+                                  000f487e         6   func ,g         0
   _enable_RightBtn_isr
-                                  000f4976         e   func ,g         0
+                                  000f4884         e   func ,g         0
   _TimerA0Interrupt
-                                  000f4984        19   func ,g         0
+                                  000f4892        19   func ,g         0
   _TimerA1Interrupt
-                                  000f499c        18   func ,g         0
+                                  000f48aa        18   func ,g         0
   _TimerA2Interrupt
-                                  000f49b4        1e   func ,g         0
+                                  000f48c2        1e   func ,g         0
   _TimerB0Interrupt
-                                  000f49d2        18   func ,g         0
+                                  000f48e0        18   func ,g         0
   _LeftBtnInterrupt
-                                  000f49ea         b   func ,g         0
+                                  000f48f8         b   func ,g         0
   _MiddleBtnInterrupt
-                                  000f49f6         c   func ,g         0
+                                  000f4904         c   func ,g         0
   _RightBtnInterrupt
-                                  000f4a02         c   func ,g         0
+                                  000f4910         c   func ,g         0
   _UART0ReceiveInterrupt
-                                  000f4a0e        28   func ,g         0
+                                  000f491c        28   func ,g         0
   _UART2ReceiveInterrupt
-                                  000f4a36        2c   func ,g         0
+                                  000f4944        2c   func ,g         0
   _A2DInterrupt
-                                  000f4a62         6   func ,g         0
+                                  000f4970         6   func ,g         0
   _KeyBoardInterrupt
-                                  000f4a68         6   func ,g         0
+                                  000f4976         6   func ,g         0
   _RTCInterrupt
-                                  000f4a6e         6   func ,g         0
+                                  000f497c         6   func ,g         0
   _WatchDogInterrupt
-                                  000f4a74         6   func ,g         0
+                                  000f4982         6   func ,g         0
   _UART0TransmitInterrupt
-                                  000f4a7a         6   func ,g         0
+                                  000f4988         6   func ,g         0
 
 FILE=C:/WorkSpace/Project2a/Project2a/IR
-                                  000f4a86  000f4b6c        e7
+                                  000f4994  000f4a7a        e7
   _IR_emitter_on
-                                  000f4a86         5   func ,g         0
+                                  000f4994         5   func ,g         0
   _IR_emitter_off
-                                  000f4a8c         6   func ,g         0
+                                  000f499a         6   func ,g         0
   _calibrateIR
-                                  000f4a92        cf   func ,g         0
+                                  000f49a0        cf   func ,g         0
   $setIR_threshold
-                                  000f4b60         d   func ,g         0
+                                  000f4a6e         d   func ,g         0
 
 FILE=C:/WorkSpace/Project2a/Project2a/IRmovement
-                                  000f4b6e  000f4c42        d5
+                                  000f4a7c  000f4b50        d5
   _moveBackandForth
-                                  000f4b6e        d5   func ,g         0
+                                  000f4a7c        d5   func ,g         0
 
 FILE=C:/WorkSpace/Project2a/Project2a/LCD
-                                  000f4c44  000f54a7       864
+                                  000f4b52  000f53b5       864
   _InitDisplay
-                                  000f4c44        bd   func ,g         0
+                                  000f4b52        bd   func ,g         0
   _BNSPrintf
-                                  000f4d02       5b0   func ,g         0
+                                  000f4c10       5b0   func ,g         0
   $BNSPutch
-                                  000f52b2        58   func ,g         0
+                                  000f51c0        58   func ,g         0
   $DisplayString
-                                  000f530a        5f   func ,g         0
+                                  000f5218        5f   func ,g         0
   $LCD_write
-                                  000f5368        ae   func ,g         0
+                                  000f5276        ae   func ,g         0
   _DisplayDelay
-                                  000f5416        2e   func ,g         0
+                                  000f5324        2e   func ,g         0
   _system_clock_init
-                                  000f5444        44   func ,g         0
+                                  000f5352        44   func ,g         0
   _clearScreen
-                                  000f5488        20   func ,g         0
+                                  000f5396        20   func ,g         0
 
 FILE=C:/WorkSpace/Project2a/Project2a/led
-                                  000f54a8  000f54a8         1
+                                  000f53b6  000f53b6         1
   _LEDDisplay
-                                  000f54a8         1   func ,g         0
+                                  000f53b6         1   func ,g         0
 
 FILE=C:/WorkSpace/Project2a/Project2a/main
-                                  000f54aa  000f55de       135
+                                  000f53b8  000f54ce       117
   _main
-                                  000f54aa       135   func ,g         0
+                                  000f53b8       117   func ,g         0
 
 FILE=C:/WorkSpace/Project2a/Project2a/movement
-                                  000f55e0  000f5662        83
+                                  000f54d0  000f5552        83
   _left_motor_forward
-                                  000f55e0        14   func ,g         0
+                                  000f54d0        14   func ,g         0
   _left_motor_reverse
-                                  000f55f4        14   func ,g         0
+                                  000f54e4        14   func ,g         0
   _right_motor_forward
-                                  000f5608        14   func ,g         0
+                                  000f54f8        14   func ,g         0
   _right_motor_reverse
-                                  000f561c        14   func ,g         0
+                                  000f550c        14   func ,g         0
   _motors_off
-                                  000f5630         7   func ,g         0
+                                  000f5520         7   func ,g         0
   _right_motor_off
-                                  000f5638         e   func ,g         0
+                                  000f5528         e   func ,g         0
   _left_motor_off
-                                  000f5646         e   func ,g         0
+                                  000f5536         e   func ,g         0
   _move_forward
-                                  000f5654         8   func ,g         0
+                                  000f5544         8   func ,g         0
 
 FILE=C:/WorkSpace/Project2a/Project2a/movementLeftCheck
-                                  000f5664  000f5695        32
+                                  000f5554  000f5585        32
   _is_left_forward_on
-                                  000f5664         9   func ,g         0
+                                  000f5554         9   func ,g         0
   _is_left_reverse_on
-                                  000f566e         a   func ,g         0
+                                  000f555e         a   func ,g         0
 
 FILE=C:/WorkSpace/Project2a/Project2a/movementRightCheck
-                                  000f5696  000f56c7        32
+                                  000f5586  000f55b7        32
   _is_right_forward_on
-                                  000f5696         9   func ,g         0
+                                  000f5586         9   func ,g         0
   _is_right_reverse_on
-                                  000f56a0         a   func ,g         0
+                                  000f5590         a   func ,g         0
 
 FILE=C:/WorkSpace/Project2a/Project2a/ports
-                                  000f56c8  000f58f1       22a
+                                  000f55b8  000f57e1       22a
   _init_ports
-                                  000f56c8        19   func ,g         0
+                                  000f55b8        19   func ,g         0
   _init_port0
-                                  000f56e2        26   func ,g         0
+                                  000f55d2        26   func ,g         0
   _init_port1
-                                  000f5708        26   func ,g         0
+                                  000f55f8        26   func ,g         0
   _init_port2
-                                  000f572e        26   func ,g         0
+                                  000f561e        26   func ,g         0
   _init_port3
-                                  000f5754        26   func ,g         0
+                                  000f5644        26   func ,g         0
   _init_port4
-                                  000f577a        26   func ,g         0
+                                  000f566a        26   func ,g         0
   _init_port5
-                                  000f57a0        26   func ,g         0
+                                  000f5690        26   func ,g         0
   _init_port6
-                                  000f57c6        42   func ,g         0
+                                  000f56b6        42   func ,g         0
   _init_port7
-                                  000f5808        42   func ,g         0
+                                  000f56f8        42   func ,g         0
   _init_port8
-                                  000f584a        42   func ,g         0
+                                  000f573a        42   func ,g         0
   _init_port9
-                                  000f588c        42   func ,g         0
+                                  000f577c        42   func ,g         0
 
 FILE=C:/WorkSpace/Project2a/Project2a/serial
-                                  000f58f2  000f5ab8       1c7
+                                  000f57e2  000f59a8       1c7
   _InitUART
-                                  000f58f2        c4   func ,g         0
+                                  000f57e2        c4   func ,g         0
   $transmitUART2
-                                  000f59b6        86   func ,g         0
+                                  000f58a6        86   func ,g         0
   _displayUART2Stream
-                                  000f5a3c        7d   func ,g         0
+                                  000f592c        7d   func ,g         0
 
 FILE=C:/WorkSpace/Project2a/Project2a/shapes
-                                  000f5aba  000f5cbe       205
+                                  000f59aa  000f5bae       205
   $rightCircle
-                                  000f5aba        57   func ,g         0
+                                  000f59aa        57   func ,g         0
   $leftCircle
-                                  000f5b12        52   func ,g         0
+                                  000f5a02        52   func ,g         0
   $triangle
-                                  000f5b64       12e   func ,g         0
+                                  000f5a54       12e   func ,g         0
 
 FILE=C:/WorkSpace/Project2a/Project2a/timers
-                                  000f5cc0  000f5dea       12b
+                                  000f5bb0  000f5cda       12b
   _TimerInit
-                                  000f5cc0         d   func ,g         0
+                                  000f5bb0         d   func ,g         0
   _TimerA0_Init
-                                  000f5cce        2c   func ,g         0
+                                  000f5bbe        2c   func ,g         0
   _start_leftWheel
-                                  000f5cfa         a   func ,g         0
+                                  000f5bea         a   func ,g         0
   _stop_timerA0
-                                  000f5d04         a   func ,g         0
+                                  000f5bf4         a   func ,g         0
   _TimerA1_Init
-                                  000f5d0e        24   func ,g         0
+                                  000f5bfe        24   func ,g         0
   $timerDelay
-                                  000f5d32        16   func ,g         0
+                                  000f5c22        16   func ,g         0
   _TimerA2_Init
-                                  000f5d48        24   func ,g         0
+                                  000f5c38        24   func ,g         0
   _start_timerA2
-                                  000f5d6c         a   func ,g         0
+                                  000f5c5c         a   func ,g         0
   _stop_timerA2
-                                  000f5d76         a   func ,g         0
+                                  000f5c66         a   func ,g         0
   _TimerB0_Init
-                                  000f5d80        2c   func ,g         0
+                                  000f5c70        2c   func ,g         0
   _start_rightWheel
-                                  000f5dac         a   func ,g         0
+                                  000f5c9c         a   func ,g         0
   _stop_timerB0
-                                  000f5db6         a   func ,g         0
+                                  000f5ca6         a   func ,g         0
   _start_wheelTimers
-                                  000f5dc0         8   func ,g         0
+                                  000f5cb0         8   func ,g         0
   _stop_wheelTimers
-                                  000f5dc8         8   func ,g         0
+                                  000f5cb8         8   func ,g         0
   $set_rWheelCount
-                                  000f5dd0         e   func ,g         0
+                                  000f5cc0         e   func ,g         0
 
 FILE=_f8add
-                                  000f5dec  000f6706       91b
+                                  000f5cdc  000f65f6       91b
   __f8add
-                                  000f5dec       6dd   func ,g         0
+                                  000f5cdc       6dd   func ,g         0
 
 FILE=_f8ge
-                                  000f6708  000f67ae        a7
+                                  000f65f8  000f669e        a7
   __f8ge
-                                  000f6708        a7   func ,g         0
+                                  000f65f8        a7   func ,g         0
 
 FILE=_f8mul
-                                  000f67b0  000f6a76       2c7
+                                  000f66a0  000f6966       2c7
   __f8mul
-                                  000f67b0       2c7   func ,g         0
+                                  000f66a0       2c7   func ,g         0
 
 FILE=_f8sub
-                                  000f6a78  000f6a9f        28
+                                  000f6968  000f698f        28
   __f8sub
-                                  000f6a78        28   func ,g         0
+                                  000f6968        28   func ,g         0
 
 FILE=_f8toi4u
-                                  000f6aa0  000f6ac4        25
+                                  000f6990  000f69b4        25
   __f8toi4U
-                                  000f6aa0        25   func ,g         0
+                                  000f6990        25   func ,g         0
 
 FILE=_ftol
-                                  000f6ac6  000f6bd6       111
+                                  000f69b6  000f6ac6       111
   $_ftol
-                                  000f6ac6       111   func ,g         0
+                                  000f69b6       111   func ,g         0
 
 FILE=_i4divu
-                                  000f6bd8  000f6c24        4d
+                                  000f6ac8  000f6b14        4d
   __i4divU
-                                  000f6bd8        4d   func ,g         0
+                                  000f6ac8        4d   func ,g         0
 
 FILE=_i4modu
-                                  000f6c26  000f6c70        4b
+                                  000f6b16  000f6b60        4b
   __i4modU
-                                  000f6c26        4b   func ,g         0
+                                  000f6b16        4b   func ,g         0
 
 FILE=_i4mulu
-                                  000f6c72  000f6c8d        1c
+                                  000f6b62  000f6b7d        1c
   __i4mulU
-                                  000f6c72        1c   func ,g         0
+                                  000f6b62        1c   func ,g         0
 
 FILE=_i4utof8
-                                  000f6c8e  000f6caf        22
+                                  000f6b7e  000f6b9f        22
   __i4Utof8
-                                  000f6c8e        22   func ,g         0
+                                  000f6b7e        22   func ,g         0
 
 FILE=_ltof
-                                  000f6cb0  000f6d83        d4
+                                  000f6ba0  000f6c73        d4
   $_ltof
-                                  000f6cb0        d4   func ,g         0
-
-FILE=malloc
-                                  000f6d84  000f6f5c       1d9
-  _malloc
-                                  000f6d84        63   func ,g         0
-
-FILE=realloc
-                                  000f6f5e  000f6fe2        85
-  _realloc
-                                  000f6f5e        85   func ,g         0
-
-FILE=free
-                                  000f6fe4  000f72b2       2cf
-  _free
-                                  000f6fe4        38   func ,g         0
-  $rlsmem
-                                  000f701c       297   func ,g         0
-
-FILE=memcpy
-                                  000f72b4  000f7302        4f
-  _memcpy
-                                  000f72b4        4f   func ,g         0
-
-FILE=memmove
-                                  000f7304  000f73ac        a9
-  _memmove
-                                  000f7304        a9   func ,g         0
-
-FILE=memset
-                                  000f73ae  000f73ee        41
-  $memset
-                                  000f73ae        41   func ,g         0
-
-FILE=strlen
-                                  000f73f0  000f741a        2b
-  _strlen
-                                  000f73f0        2b   func ,g         0
-
-FILE=strncpy
-                                  000f741c  000f7464        49
-  _strncpy
-                                  000f741c        49   func ,g         0
+                                  000f6ba0        d4   func ,g         0
 
 FILE=_f8ltor
-                                  000f7466  000f74b9        54
+                                  000f6c74  000f6cc7        54
   $_f8ltor
-                                  000f7466        54   func ,g         0
+                                  000f6c74        54   func ,g         0
 
 FILE=_f8rtol
-                                  000f74ba  000f74fa        41
+                                  000f6cc8  000f6d08        41
   $_f8rtol
-                                  000f74ba        41   func ,g         0
+                                  000f6cc8        41   func ,g         0
 
 SECTION=interrupt
 FILE=ncrt0
-                                  000f74fc  000f75a2        a7
+                                  000f6d0a  000f6db0        a7
   $exit
-                                  000f75a0         0   none ,g         0
+                                  000f6dae         0   none ,g         0
   _exit
-                                  000f75a0         0   none ,g         0
+                                  000f6dae         0   none ,g         0
   dummy_int
-                                  000f75a2         0   none ,g         0
+                                  000f6db0         0   none ,g         0
 

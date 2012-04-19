@@ -1,0 +1,11 @@
+/******************************************************************************* 
+ * File:  readme
+ * Author: Will Flores waflores@ncsu.edu
+ * Usage: Project 3 Notes
+ * Revisions:   0.0, Initial Release
+ * 
+ * Created on April 19, 2012
+ *******************************************************************************/
+
+The GPS algorithm works, it's a bit buggy when it looses its signal, other wise,
+it works with the displayScroller function. Enjoy!
