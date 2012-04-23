@@ -1,5 +1,5 @@
 /******************************************************************************* 
-* File:  QSKDefines.h
+* File:  extern.h
 * Author: Will Flores waflores@ncsu.edu
 * Usage:
 * Description: All external declarations shall be made in this file.

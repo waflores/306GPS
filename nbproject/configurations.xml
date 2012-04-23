@@ -11,6 +11,7 @@
       <itemPath>extern.h</itemPath>
       <itemPath>gps.h</itemPath>
       <itemPath>helperfuncs.h</itemPath>
+      <itemPath>menus.h</itemPath>
       <itemPath>movement.h</itemPath>
       <itemPath>ports.h</itemPath>
       <itemPath>proto.h</itemPath>
@@ -38,6 +39,7 @@
       <itemPath>helperfuncs.c</itemPath>
       <itemPath>led.c</itemPath>
       <itemPath>main.c</itemPath>
+      <itemPath>menus.c</itemPath>
       <itemPath>movement.c</itemPath>
       <itemPath>movementLeftCheck.c</itemPath>
       <itemPath>movementRightCheck.c</itemPath>

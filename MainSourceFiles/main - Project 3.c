@@ -13,8 +13,7 @@
  *              2.0, Project 2a + Homework 5 improvements
  *              2.5, Project 2b
  *              2.9, Homework 8 Functionality
- *              3.0, Project 3 works :)
- *              3.1, Homework 9 Functionanity
+ *              3.0, Proejct 3 works :)
  * 
  * Created on March 26, 2012
  *******************************************************************************/
@@ -29,10 +28,10 @@
 #include "movement.h"
 #include "IR.h"
 #include "gps.h"
-#include "menus.h"
 
 /*******************************************************************************
- * Purpose: This function allows the user to press a button which gives us menus.
+ * Purpose: This function allows the user to press a button which sends a string
+ *          Via serial.
  * Passed: No arguments passed.
  * Locals: No locals variables used.
  * Returned: No values returned.
@@ -40,7 +39,7 @@
  *******************************************************************************/
 void main(void) {
     /* Watchdog timer would go here */
-    int buttonCount = CLEAR_INDEX;
+	
     /* Initialize the ports */
     init_ports();
 	
@@ -48,7 +47,7 @@ void main(void) {
     system_clock_init();
     
     /* Initialize the display */
-    InitDisplay("HW9");
+    InitDisplay("Project3");
 	clearScreen();
     
     /* Initialize the interrupts */
@@ -75,42 +74,33 @@ void main(void) {
     ADInit();
     clearScreen();
     
+    /* Initialize the GPS */
+    gps_init();
+    
     while(FOREVER) {
+        /* Pressing the Buttons do Nothing in this Project */
         if (buttonPressed) {
-            // indicate that we've been pressing menu buttons
-            if (buttonCount != CLEAR_INDEX) ++buttonCount;
-            switch (buttonPressed) {
-                case SW1_PRESSED:
-                    /* Clear the bit */
-                    buttonPressed &= ~(SW1_PRESSED);
-                    /* Clear the screen */
-                    clearScreen();
-                    resistorMenu();
-                    break;
-                case SW2_PRESSED:
-                    /* Clear the bit */
-                    buttonPressed &= ~(SW2_PRESSED);
-                    clearScreen();
-                    shapeMenu();
-                    break;
-                case SW3_PRESSED:
-                    /* Clear the bit */
-                    buttonPressed &= ~(SW3_PRESSED);
-                    clearScreen();
-                    fightSongMenu();
-                    break;
-                default: // any 2+ Btn combo to terminate 
-                    buttonCount = CLEAR_INDEX;
-                    buttonPressed = CLEAR_INDEX;
-                    break;
-            } // End Switch
+            if((buttonPressed & SW1_PRESSED)) {
+                /* Clear the bit */
+                buttonPressed &= ~(SW1_PRESSED);
+                /* Clear the screen */
+                clearScreen();
+            }
+            else if ((buttonPressed & SW2_PRESSED)) {
+                /* Clear the bit */
+                buttonPressed &= ~(SW2_PRESSED);
+                clearScreen();
+            }
+            else if ((buttonPressed & SW3_PRESSED)){
+                /* Clear the bit */
+                buttonPressed &= ~(SW3_PRESSED);
+                clearScreen();
+            }	
         }
         else {
-            if (buttonCount == CLEAR_INDEX) {
-                clearScreen();
-                BNSPrintf(LCD, "\twaflores\n     HW9");
-                DisplayDelay(DISPLAY_DELAY);
-            }
+            /* Process in the input and display the coordinates */
+            gpsProcess();
+            displayScroller(latGet, lonGet);
         }
     }
 }

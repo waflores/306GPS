@@ -49,8 +49,9 @@ OBJECTFILES= \
 	${OBJECTDIR}/Interrupts.o \
 	${OBJECTDIR}/LCD.o \
 	${OBJECTDIR}/led.o \
+	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/IRmovement.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/menus.o
 
 
 # C Compiler Flags
@@ -152,15 +153,20 @@ ${OBJECTDIR}/led.o: led.c
 	${RM} $@.d
 	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/led.o led.c
 
+${OBJECTDIR}/main.o: main.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
+
 ${OBJECTDIR}/IRmovement.o: IRmovement.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/IRmovement.o IRmovement.c
 
-${OBJECTDIR}/main.o: main.c 
+${OBJECTDIR}/menus.o: menus.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/menus.o menus.c
 
 # Subprojects
 .build-subprojects:

@@ -37,9 +37,13 @@
 #define BUTTON_RESET PIN_HIGH // Button not Pressed
 
 #define DEFAULTS 0x0000
-#define SW1_PRESSED 0x0001 // Bit1
-#define SW2_PRESSED 0x0002 // Bit2
-#define SW3_PRESSED 0x0004 // Bit3
+#define MULTIPLE_BUTTONS 2
+#define SINGLE_BUTTONS 1
+#define TWO_BTN_COMBO_1 0x03
+#define TWO_BTN_COMBO_2 0x05
+#define SW1_PRESSED 0x01 // Bit2
+#define SW2_PRESSED 0x02 // Bit3
+#define SW3_PRESSED 0x04 // Bit4
 
 /* LEDs */
 #define	LED0	p8_0

@@ -167,5 +167,8 @@
 #define NEXT_MSG1 0x200
 #define NEXT_MSG2 0x100
 #define END_MSG   0x000
-
+// math
+#define BINARY 2
+#define ODD 1
+#define EVEN 0
 #endif /* QSKDEFINES_H */

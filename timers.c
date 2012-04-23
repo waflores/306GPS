@@ -15,7 +15,7 @@
 #include "QSKDefines.h"
 #include "proto.h"
 #include "extern.h"
-
+#define NUM_OF_SECS 1e-3
 /* Use these vars to designate how many times you want a certain wheel to be on */
 volatile unsigned int r_count; 
 volatile unsigned int l_count;
@@ -59,7 +59,7 @@ void TimerA0_Init(void) {
     ta0mr |= SRC_F32;	             // Clock Source f32
     // (12MHz / 32 * [time in millisecond] / 1000 ms per second )-1
 
-    ta0 = (unsigned int) (((f1_CLK_SPEED/32)*DESIRED_TIME_MS*1e-3) - 1);	
+    ta0 = (unsigned int) (((f1_CLK_SPEED/32)*DESIRED_TIME_MS*NUM_OF_SECS) - 1);	
     // disable irqs before setting irq registers - macro defined in skp_bsp.h
     DISABLE_IRQ		
     // Set the timer B0's IPL (interrupt priority level) to 3
@@ -111,7 +111,7 @@ void TimerA1_Init(void) {
     ta1mr |= TIMER_MODE;	             // Timer mode
     ta1mr |= SRC_F32;	             // Count Source f32
     // (12MHz / 32 * [time in millisecond] / 1000 ms per second )-1
-    ta1 = (unsigned int) (((f1_CLK_SPEED/32)*DESIRED_TIME_MS*1e-3) - 1); // 5 ms timer
+    ta1 = (unsigned int) (((f1_CLK_SPEED/32)*DESIRED_TIME_MS*NUM_OF_SECS) - 1); // 5 ms timer
 
     // disable irqs before setting irq registers - macro defined in skp_bsp.h
     DISABLE_IRQ		
@@ -150,7 +150,7 @@ void TimerA2_Init(void) {
     ta2mr |= SRC_F32;	             // Count Source f32
     // (12MHz / 32 * [time in millisecond] / 1000 ms per second )-1
 
-    ta2 = (unsigned int) (((f1_CLK_SPEED/32)*DESIRED_TIME_MS*1e-3) - 1); // 5 ms timer
+    ta2 = (unsigned int) (((f1_CLK_SPEED/32)*DESIRED_TIME_MS*NUM_OF_SECS) - 1); // 5 ms timer
 
     // disable irqs before setting irq registers - macro defined in skp_bsp.h
     DISABLE_IRQ		
@@ -200,7 +200,7 @@ void TimerB0_Init(void) {
     tb0mr |= SRC_F32;	             // Clock Source f32
     // (12MHz / 32 * [time in millisecond] / 1000 ms per second )-1
 
-    tb0 = (unsigned int) (((f1_CLK_SPEED/32)*DESIRED_TIME_MS*1e-3) - 1);	
+    tb0 = (unsigned int) (((f1_CLK_SPEED/32)*DESIRED_TIME_MS*NUM_OF_SECS) - 1);	
     // disable irqs before setting irq registers - macro defined in skp_bsp.h
     DISABLE_IRQ
     // Set the timer B0's IPL (interrupt priority level) to 3

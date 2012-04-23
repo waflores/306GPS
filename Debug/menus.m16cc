@@ -1,0 +1,7 @@
+-I"C:\WorkSpace\Project2a"
+-I"C:\WorkSpace\Project2a\Project2a"
+-I"C:\WorkSpace\Project2a\..\Common"
+-c
+-finfo
+-dir "C:\WorkSpace\Project2a\Project2a\Debug"
+"C:\WorkSpace\Project2a\Project2a\menus.c"
